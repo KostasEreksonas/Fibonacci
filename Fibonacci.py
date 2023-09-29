@@ -103,11 +103,11 @@ def skaiciavimas(sk, metodas):
     print(f"{graph[-1][0]} Fibonačio skaičius yra {graph[-1][2]}, suskaičiuota per {graph[-1][1]} sekundes")
     grafikas(graph)
 
-def grafikas(data):
+def grafikas(graph):
     laikas,eile = [[] for x in range(2)]
-    for x in range(len(data)):
-        laikas.append(data[x][1])
-        eile.append(data[x][0])
+    for x in range(len(graph)):
+        laikas.append(graph[x][1])
+        eile.append(graph[x][0])
     plt.plot(laikas,eile)
     plt.xlabel("Laikas, s")
     plt.ylabel("Eilės numeris")
